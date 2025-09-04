@@ -1,1 +1,282 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #000000;
+    transition: background-color 0.5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Gold Gradient Text */
+.gradient-text {
+    background: linear-gradient(45deg, #FFD700, #FFAC33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Enhanced Text effect for header */
+.text-premium-effect {
+    -webkit-text-stroke: 1px #000000;
+}
+
+/* Reverted Header and Footer Theme to Milk White */
+.header-content,
+.footer-content {
+    background-color: #f9fafb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #d1d5db;
+}
+
+.footer-content {
+    border-top: 2px solid #d1d5db;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background-color: #1a1c20;
+    border-radius: 1.0rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.input-group {
+    background-color: #1a1c20;
+    border-radius: 0.75rem;
+    border: 1px solid #444;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.input-group:focus-within {
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.upi-btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .upi-btn-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Revamped UPI Button Styles */
+.upi-btn {
+    border-radius: 9999px;
+    transition: all 0.2s ease-in-out;
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: 2px solid;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.upi-btn .upi-icon-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-icon-bg);
+    border: 2px solid var(--color-icon-border);
+    margin: -2px;
+    margin-right: 0.5rem;
+}
+
+.upi-btn .upi-icon-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+}
+
+.upi-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--color-hover)80, 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-hover);
+    color: var(--color-hover);
+}
+
+.upi-btn-active {
+    box-shadow: 0 0 12px var(--color-active)80, 0 0 0 3px var(--color-active)30, 0 0 8px rgba(0, 0, 0, 0.4);
+    border-color: var(--color-active);
+    color: var(--color-active);
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white background */
+}
+
+.upi-btn-icon {
+    transition: transform 0.2s ease-in-out;
+}
+
+.upi-btn:hover .upi-btn-icon {
+    transform: scale(1.1);
+}
+
+.upi-btn span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    /* Adjusting font size to be slightly larger */
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    animation: modalPopIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qr-button-active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4f46e5;
+}
+
+.amount-pill {
+    display: inline-flex;
+    align-items: center;
+    background-color: #2b2e35;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #444;
+    color: #ccc;
+}
+
+/* New Advanced Loading State Styles */
+.qr-code-container {
+    border-radius: 0.5rem;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.qr-code-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: #ea580c;
+    border-radius: 12px;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0 10px #ea580c, 0 0 20px #ea580c, 0 0 40px #ea580c;
+    animation: qr-loading 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    z-index: 10;
+}
+
+@keyframes qr-loading {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+/* End of New Advanced Loading State Styles */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalPopIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.edit-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.logo-container {
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+.popup-upi-btn {
+    background-color: #0c0d10;
+    border: 2px solid;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.popup-upi-btn-active {
+    box-shadow: 0 0 0 2px #0c0d10, 0 0 0 4px;
+}
+
+/* Updated QR Code Container Gradient */
+.qr-code-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 0.75rem;
+    background: linear-gradient(45deg, #FFD700, #FFAC33, #FFD700);
+    z-index: -1;
+    animation: none;
+}
+
+.history-item-actions {
+    display: none;
+    gap: 0.5rem;
+}
+
+.history-item:hover .history-item-actions {
+    display: flex;
+}
 
