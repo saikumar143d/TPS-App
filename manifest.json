@@ -1,22 +1,22 @@
 {
-    "name": "Trinadha Paan Shop",
-    "short_name": "TPS QR",
-    "description": "A QR code generator for a local business",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "#000000",
-    "theme_color": "#FFD700",
-    "icons": [
-        {
-            "src": "https://od.lk/s/NDJfNDk0NzI1MzNf/stylized-qr-code-icon-with-vibrant-colors-modern-design_1299084-18665.avif",
-            "sizes": "192x192",
-            "type": "image/avif"
-        },
-        {
-            "src": "https://od.lk/s/NDJfNDk0NzI1MzNf/stylized-qr-code-icon-with-vibrant-colors-modern-design_1299084-18665.avif",
-            "sizes": "512x512",
-            "type": "image/avif"
-        }
-    ]
+"name": "Trinadha Paan Shop",
+"short_name": "Paan Shop",
+"description": "QR Code generator for UPI payments for Trinadha Paan Shop.",
+"start_url": "/trinadha-paan-shop/",
+"scope": "/trinadha-paan-shop/",
+"display": "standalone",
+"background_color": "#121212",
+"theme_color": "#242424",
+"icons": [
+{
+"src": "https://www.google.com/search?q=https://ucarecdn.com/f04c6001-f2f2-45e0-94a2-19e4a0551065/-/preview/-/scale_crop/192x192/",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "https://www.google.com/search?q=https://ucarecdn.com/f04c6001-f2f2-45e0-94a2-19e4a0551065/-/preview/-/scale_crop/512x512/",
+"sizes": "512x512",
+"type": "image/png"
 }
-
+]
+}
